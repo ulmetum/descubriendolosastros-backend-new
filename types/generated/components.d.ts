@@ -17,6 +17,18 @@ export interface ElementsContentText extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsDoubleColumns extends Struct.ComponentSchema {
+  collectionName: 'components_elements_double_columns';
+  info: {
+    description: '';
+    displayName: 'DoubleColumns';
+  };
+  attributes: {
+    textColumnLeft: Schema.Attribute.Text;
+    textColumnRight: Schema.Attribute.Text;
+  };
+}
+
 export interface ElementsLink extends Struct.ComponentSchema {
   collectionName: 'components_elements_links';
   info: {
@@ -31,13 +43,27 @@ export interface ElementsLink extends Struct.ComponentSchema {
 export interface ElementsPhoto extends Struct.ComponentSchema {
   collectionName: 'components_elements_photos';
   info: {
+    description: '';
     displayName: 'Photo';
   };
   attributes: {
     alt: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
-    position: Schema.Attribute.Enumeration<['left', 'center', 'right']> &
-      Schema.Attribute.DefaultTo<'left'>;
+    positionText: Schema.Attribute.Enumeration<['left', 'right']> &
+      Schema.Attribute.DefaultTo<'right'>;
+    textImage: Schema.Attribute.Text;
+  };
+}
+
+export interface ElementsQuote extends Struct.ComponentSchema {
+  collectionName: 'components_elements_quotes';
+  info: {
+    description: '';
+    displayName: 'Quote';
+  };
+  attributes: {
+    authorQuote: Schema.Attribute.String;
+    textQuote: Schema.Attribute.Text;
   };
 }
 
@@ -82,8 +108,10 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'elements.content-text': ElementsContentText;
+      'elements.double-columns': ElementsDoubleColumns;
       'elements.link': ElementsLink;
       'elements.photo': ElementsPhoto;
+      'elements.quote': ElementsQuote;
       'elements.social-link': ElementsSocialLink;
       'elements.video-url': ElementsVideoUrl;
       'seo.meta-data': SeoMetaData;

@@ -1,28 +1,33 @@
 {
   "collectionName": "components_elements_photos",
   "info": {
-    "displayName": "Photo"
+    "displayName": "Photo",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "alt": {
       "type": "string"
     },
-    "position": {
+    "textImage": {
+      "type": "text",
+      "required": false
+    },
+    "positionText": {
       "type": "enumeration",
       "enum": [
         "left",
-        "center",
         "right"
       ],
-      "default": "left"
+      "default": "right"
     }
   }
 }

@@ -20,9 +20,6 @@
       "type": "uid",
       "targetField": "title"
     },
-    "excerpt": {
-      "type": "text"
-    },
     "featuredImage": {
       "type": "media",
       "multiple": false,
@@ -54,8 +51,10 @@
       "type": "dynamiczone",
       "components": [
         "elements.content-text",
+        "elements.video-url",
         "elements.photo",
-        "elements.video-url"
+        "elements.double-columns",
+        "elements.quote"
       ]
     },
     "subtitle": {

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_double_columns",
+  "info": {
+    "displayName": "DoubleColumns",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "textColumnLeft": {
+      "type": "text"
+    },
+    "textColumnRight": {
+      "type": "text"
+    }
+  }
+}

@@ -385,9 +385,14 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     elements: Schema.Attribute.DynamicZone<
-      ['elements.content-text', 'elements.photo', 'elements.video-url']
+      [
+        'elements.content-text',
+        'elements.video-url',
+        'elements.photo',
+        'elements.double-columns',
+        'elements.quote',
+      ]
     >;
-    excerpt: Schema.Attribute.Text;
     featuredImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
