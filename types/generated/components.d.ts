@@ -1,5 +1,32 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ElementsAccordion extends Struct.ComponentSchema {
+  collectionName: 'components_elements_accordions';
+  info: {
+    description: '';
+    displayName: 'Accordion';
+  };
+  attributes: {
+    headingAccordion: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'elements.accordion-item', true>;
+  };
+}
+
+export interface ElementsAccordionItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_accordion_items';
+  info: {
+    description: '';
+    displayName: 'AccordionItem';
+  };
+  attributes: {
+    contentAccordion: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 300;
+      }>;
+    titleAccordion: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsContentText extends Struct.ComponentSchema {
   collectionName: 'components_elements_content_texts';
   info: {
@@ -107,6 +134,8 @@ export interface SeoMetaData extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'elements.accordion': ElementsAccordion;
+      'elements.accordion-item': ElementsAccordionItem;
       'elements.content-text': ElementsContentText;
       'elements.double-columns': ElementsDoubleColumns;
       'elements.link': ElementsLink;

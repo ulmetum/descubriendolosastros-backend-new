@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_accordion_items",
+  "info": {
+    "displayName": "AccordionItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "titleAccordion": {
+      "type": "string"
+    },
+    "contentAccordion": {
+      "type": "text",
+      "maxLength": 300
+    }
+  }
+}

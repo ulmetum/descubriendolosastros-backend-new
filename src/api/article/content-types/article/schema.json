@@ -54,7 +54,8 @@
         "elements.video-url",
         "elements.photo",
         "elements.double-columns",
-        "elements.quote"
+        "elements.quote",
+        "elements.accordion"
       ]
     },
     "subtitle": {

@@ -391,6 +391,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         'elements.photo',
         'elements.double-columns',
         'elements.quote',
+        'elements.accordion',
       ]
     >;
     featuredImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
