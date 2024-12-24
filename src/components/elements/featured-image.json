@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_featured_images",
+  "info": {
+    "displayName": "featuredImage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "alt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

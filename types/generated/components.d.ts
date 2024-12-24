@@ -56,6 +56,18 @@ export interface ElementsDoubleColumns extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsFeaturedImage extends Struct.ComponentSchema {
+  collectionName: 'components_elements_featured_images';
+  info: {
+    description: '';
+    displayName: 'featuredImage';
+  };
+  attributes: {
+    alt: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsLink extends Struct.ComponentSchema {
   collectionName: 'components_elements_links';
   info: {
@@ -138,6 +150,7 @@ declare module '@strapi/strapi' {
       'elements.accordion-item': ElementsAccordionItem;
       'elements.content-text': ElementsContentText;
       'elements.double-columns': ElementsDoubleColumns;
+      'elements.featured-image': ElementsFeaturedImage;
       'elements.link': ElementsLink;
       'elements.photo': ElementsPhoto;
       'elements.quote': ElementsQuote;

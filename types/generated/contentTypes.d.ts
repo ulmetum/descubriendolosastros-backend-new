@@ -394,7 +394,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         'elements.accordion',
       ]
     >;
-    featuredImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    featuredImage: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -470,7 +470,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'elements.quote',
       ]
     >;
-    featuredImage: Schema.Attribute.Media<'images'>;
+    featuredImage: Schema.Attribute.Component<'elements.featured-image', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

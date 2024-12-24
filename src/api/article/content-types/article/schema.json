@@ -20,14 +20,6 @@
       "type": "uid",
       "targetField": "title"
     },
-    "featuredImage": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "writer": {
       "type": "relation",
       "relation": "manyToOne",
@@ -61,6 +53,13 @@
     "subtitle": {
       "type": "text",
       "required": true
+    },
+    "featuredImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
