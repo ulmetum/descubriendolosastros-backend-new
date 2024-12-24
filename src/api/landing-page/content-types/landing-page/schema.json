@@ -39,13 +39,13 @@
         "elements.quote"
       ]
     },
-    "subtitle": {
-      "type": "string"
-    },
     "featuredImage": {
       "type": "component",
       "repeatable": false,
       "component": "elements.featured-image"
+    },
+    "subtitle": {
+      "type": "string"
     }
   }
 }
