@@ -448,6 +448,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   collectionName: 'landing_pages';
   info: {
+    description: '';
     displayName: 'Landing Page';
     pluralName: 'landing-pages';
     singularName: 'landing-page';
@@ -460,15 +461,26 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
+    elements: Schema.Attribute.DynamicZone<
+      [
+        'elements.content-text',
+        'elements.double-columns',
+        'elements.accordion',
+        'elements.photo',
+        'elements.quote',
+      ]
+    >;
+    featuredImage: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::landing-page.landing-page'
     > &
       Schema.Attribute.Private;
-    MetaData: Schema.Attribute.Component<'seo.meta-data', false>;
+    metadata: Schema.Attribute.Component<'seo.meta-data', false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
+    subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
