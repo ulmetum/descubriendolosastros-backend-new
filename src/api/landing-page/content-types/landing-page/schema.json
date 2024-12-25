@@ -4,7 +4,8 @@
   "info": {
     "singularName": "landing-page",
     "pluralName": "landing-pages",
-    "displayName": "Landing Page"
+    "displayName": "Landing Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,11 +25,6 @@
     "description": {
       "type": "text"
     },
-    "featuredImage": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.featured-image"
-    },
     "metadata": {
       "type": "component",
       "repeatable": false,
@@ -43,6 +39,14 @@
         "elements.content-text",
         "elements.accordion"
       ]
+    },
+    "featuredImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

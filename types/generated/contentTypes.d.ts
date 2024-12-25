@@ -448,6 +448,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   collectionName: 'landing_pages';
   info: {
+    description: '';
     displayName: 'Landing Page';
     pluralName: 'landing-pages';
     singularName: 'landing-page';
@@ -469,7 +470,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'elements.accordion',
       ]
     >;
-    featuredImage: Schema.Attribute.Component<'elements.featured-image', false>;
+    featuredImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
