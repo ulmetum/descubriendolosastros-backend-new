@@ -87,7 +87,7 @@ export interface ElementsPhoto extends Struct.ComponentSchema {
   };
   attributes: {
     alt: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     positionText: Schema.Attribute.Enumeration<['left', 'right']> &
       Schema.Attribute.DefaultTo<'right'>;
     textImage: Schema.Attribute.Text;

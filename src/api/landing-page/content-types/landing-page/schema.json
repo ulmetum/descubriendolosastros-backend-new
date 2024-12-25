@@ -29,16 +29,6 @@
       "repeatable": false,
       "component": "seo.meta-data"
     },
-    "elements": {
-      "type": "dynamiczone",
-      "components": [
-        "elements.content-text",
-        "elements.double-columns",
-        "elements.accordion",
-        "elements.photo",
-        "elements.quote"
-      ]
-    },
     "featuredImage": {
       "type": "component",
       "repeatable": false,
@@ -46,6 +36,17 @@
     },
     "subtitle": {
       "type": "string"
+    },
+    "elements": {
+      "type": "dynamiczone",
+      "components": [
+        "elements.quote",
+        "elements.photo",
+        "elements.featured-image",
+        "elements.double-columns",
+        "elements.content-text",
+        "elements.accordion"
+      ]
     }
   }
 }

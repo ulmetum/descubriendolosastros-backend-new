@@ -39,27 +39,28 @@
       "repeatable": false,
       "component": "seo.meta-data"
     },
-    "elements": {
-      "type": "dynamiczone",
-      "components": [
-        "elements.content-text",
-        "elements.video-url",
-        "elements.photo",
-        "elements.double-columns",
-        "elements.quote",
-        "elements.accordion"
-      ]
-    },
     "subtitle": {
       "type": "text",
       "required": true
     },
     "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "elements": {
+      "type": "dynamiczone",
+      "components": [
+        "elements.video-url",
+        "elements.quote",
+        "elements.photo",
+        "elements.double-columns",
+        "elements.content-text",
+        "elements.accordion"
+      ]
     }
   }
 }

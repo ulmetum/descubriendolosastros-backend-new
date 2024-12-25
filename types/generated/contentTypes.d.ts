@@ -386,15 +386,15 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     elements: Schema.Attribute.DynamicZone<
       [
-        'elements.content-text',
         'elements.video-url',
+        'elements.quote',
         'elements.photo',
         'elements.double-columns',
-        'elements.quote',
+        'elements.content-text',
         'elements.accordion',
       ]
     >;
-    featuredImage: Schema.Attribute.Media<'images'>;
+    featuredImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -463,11 +463,12 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     elements: Schema.Attribute.DynamicZone<
       [
-        'elements.content-text',
-        'elements.double-columns',
-        'elements.accordion',
-        'elements.photo',
         'elements.quote',
+        'elements.photo',
+        'elements.featured-image',
+        'elements.double-columns',
+        'elements.content-text',
+        'elements.accordion',
       ]
     >;
     featuredImage: Schema.Attribute.Component<'elements.featured-image', false>;
