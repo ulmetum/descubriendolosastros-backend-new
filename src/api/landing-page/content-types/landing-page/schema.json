@@ -4,8 +4,7 @@
   "info": {
     "singularName": "landing-page",
     "pluralName": "landing-pages",
-    "displayName": "Landing Page",
-    "description": ""
+    "displayName": "Landing Page"
   },
   "options": {
     "draftAndPublish": true
@@ -13,36 +12,33 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "description": {
-      "type": "text",
-      "required": true
+    "subtitle": {
+      "type": "string"
     },
     "slug": {
       "type": "uid",
       "targetField": "title"
     },
-    "metadata": {
-      "type": "component",
-      "repeatable": false,
-      "component": "seo.meta-data"
+    "description": {
+      "type": "text"
     },
     "featuredImage": {
       "type": "component",
       "repeatable": false,
       "component": "elements.featured-image"
     },
-    "subtitle": {
-      "type": "string"
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta-data"
     },
     "elements": {
       "type": "dynamiczone",
       "components": [
         "elements.quote",
         "elements.photo",
-        "elements.featured-image",
         "elements.double-columns",
         "elements.content-text",
         "elements.accordion"
