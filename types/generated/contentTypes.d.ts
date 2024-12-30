@@ -478,10 +478,11 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     metadata: Schema.Attribute.Component<'seo.meta-data', false>;
+    podcastUrl: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
-    subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['podcast', 'producto']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

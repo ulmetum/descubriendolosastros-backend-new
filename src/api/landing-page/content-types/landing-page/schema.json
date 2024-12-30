@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "subtitle": {
-      "type": "string"
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -41,12 +38,22 @@
       ]
     },
     "featuredImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "podcast",
+        "producto"
+      ]
+    },
+    "podcastUrl": {
+      "type": "string"
     }
   }
 }
