@@ -38,7 +38,7 @@ export interface ElementsContentText extends Struct.ComponentSchema {
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
-          preset: 'default';
+          preset: 'defaultHtml';
         }
       >;
   };
